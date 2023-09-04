@@ -1,0 +1,8 @@
+nav{
+    background: linear-gradient(315deg, #4ecdc4 0%, #c797eb 75%);
+    .active{
+        color:  #bd3a9c;
+        transform: scale(1.2);
+        font-weight: 600;
+    }
+}

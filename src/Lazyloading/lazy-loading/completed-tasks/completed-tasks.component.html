@@ -1,0 +1,42 @@
+<section class="container my-5">
+    <h2 class="text-center my-4">Completed Task</h2>
+    <form class="row gy-2 gx-3 mb-5">
+      <div class="col-auto me-auto">
+        <div class="input-group">
+          <input type="text" class="form-control" id="autoSizingInput" placeholder="Search By Username" #inputUser>
+          <div class="input-group-text btn" (click)="searchByUser(inputUser.value)"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="input-group">
+          <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Search By Title" #inputTitle>
+          <div class="input-group-text btn" (click)="searchByTitle(inputTitle.value)"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+      </div>
+    </form>
+    <div class="row card my-3 mx-auto w-75" *ngFor="let task of compeletedTask let i=index">
+      <div class="card-header text-center p-3 fw-bold h4">
+        {{task.username}}
+      </div>
+      <div class="card-body text-center">
+        <h5 class="card-title p-3 bg-info h5">Title: {{task.title}}</h5>
+        <p class="card-text h6 p-3 bg-info">Content : {{task.content}}</p>
+        <p class="card-text h6 p-3 bg-info p-3">Time : {{task.time}}</p>
+        <div class="row">
+          <div>
+            <button class="col-10 btn btn-danger my-3" (click)="deleteTask(task.id,i)">remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div *ngIf="!compeletedTask.length">
+    <div class="card-header text-center p-3 fw-bold h1">
+      NO tasks Completed here...
+      <div class="row">
+        <div>
+          <button  class="col-10 btn btn-success p-2 my-3" (click)="toAdd()">Add Task</button>
+        </div>
+    </div>
+  </div>

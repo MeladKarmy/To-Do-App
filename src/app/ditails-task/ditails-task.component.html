@@ -1,0 +1,23 @@
+<section class="container my-5">
+    <form class="col-12 col-md-10 col-lg-8 mx-auto p-4 border rounded" #FormUpdate="ngForm"  (ngSubmit)="update()">
+        <div class="form-group my-3">
+            <label class="fw-bold my-2"><i class="fa-solid fa-book-open-reader me-2" ></i>Title :</label>
+            <input type="text" class="form-control" [(ngModel)]="taskDitails.title" placeholder="Title" name="Title" #title 
+            required pattern="^[a-zA-Z\s]+$" maxlength="100" minlength="3">
+        </div>
+        <div class="form-group my-3">
+            <label class="fw-bold my-2"><i class="fa-solid fa-envelope me-2"></i>Content :</label>
+            <input type="text" class="form-control" [(ngModel)]="taskDitails.content" placeholder="Content"  name="Content" #content
+            required pattern="^^[a-zA-Z\s]+$" maxlength="100" minlength="3" >
+        </div>
+        <div class="form-group my-3">
+            <label class="fw-bold my-2"><i class="fa-solid fa-image me-2"></i>Image :</label>
+            <input type="text" class="form-control" [(ngModel)]="taskDitails.image" placeholder="Image" name="Image"
+            >
+        </div>
+        <div class=" text-center">
+            <button class="col-10 btn btn-primary" [disabled]="FormUpdate.form.invalid" >update</button>
+        </div>
+    </form>
+</section>
+
