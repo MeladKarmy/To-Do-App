@@ -16,15 +16,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Description
 
-the header have 3 component 
+The header has 3 component 
 
-1- Add Task to add new task and counter and can remove last last task if you add new task (can't remove if you not add task in first)
+1- Add Task to add new task and counter and can remove last task if you add new task (can't remove if you not add task in first)
 
-2- Home it's have all Tasks that not completed and can update it.
+2- Home has all Tasks that are not completed and can be updated it.
 
-3- Complete it's have all tasks that completed and can remove it.
+3- Complete it has all tasks that are completed and can remove it.
 
-        In Home and Completed Component can search by Title or Username
+        In-Home and Completed Component can search by Title or Username
         If NO Tasks will show Massage NO tasks
 
 ## Technology used
@@ -45,11 +45,11 @@ Services
 
 ## API
 
-I used Json Server to test
+I used JSON Server to test
 
-## To Run the APP on Lacal
+## To Run the APP on the Local
 
- 1- dawnload the code
+ 1- Download the code
  2- npm i
 
 
